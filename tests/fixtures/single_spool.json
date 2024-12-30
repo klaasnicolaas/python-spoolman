@@ -1,0 +1,36 @@
+{
+  "id": 1,
+  "registered": "2024-12-28T23:32:03Z",
+  "first_used": "2024-12-28T23:00:00Z",
+  "last_used": "2024-12-28T23:39:49.300000Z",
+  "filament": {
+    "id": 1,
+    "registered": "2024-12-28T23:32:03Z",
+    "name": "Bambu Green",
+    "vendor": {
+      "id": 1,
+      "registered": "2024-12-28T23:32:03Z",
+      "name": "Bambu Lab",
+      "external_id": "Bambu Lab",
+      "extra": {}
+    },
+    "material": "PLA",
+    "density": 1.24,
+    "diameter": 1.75,
+    "weight": 1000.0,
+    "spool_weight": 250.0,
+    "settings_extruder_temp": 220,
+    "settings_bed_temp": 60,
+    "color_hex": "00AE42",
+    "external_id": "bambulab_pla_bambugreen_1000_175_n",
+    "extra": {}
+  },
+  "remaining_weight": 1000.0,
+  "initial_weight": 1000.0,
+  "spool_weight": 250.0,
+  "used_weight": 0.0,
+  "remaining_length": 335283.6194167644,
+  "used_length": 0.0,
+  "archived": false,
+  "extra": {}
+}

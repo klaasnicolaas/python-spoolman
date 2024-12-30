@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "registered": "2024-12-28T23:32:03Z",
+    "name": "Bambu Lab",
+    "external_id": "Bambu Lab",
+    "extra": {}
+  },
+  {
+    "id": 2,
+    "registered": "2024-12-28T23:32:22Z",
+    "name": "Polymaker",
+    "external_id": "Polymaker",
+    "extra": {}
+  }
+]

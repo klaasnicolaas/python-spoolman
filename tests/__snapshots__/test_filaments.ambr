@@ -1,0 +1,10 @@
+# serializer version: 1
+# name: test_get_filament
+  Filament(id=1, name='Bambu Green', color='00AE42', vendor=Vendor(id=1, name='Bambu Lab', external_id='Bambu Lab', registered=datetime.datetime(2024, 12, 28, 23, 32, 3, tzinfo=datetime.timezone.utc)), external_id='bambulab_pla_bambugreen_1000_175_n', registered=datetime.datetime(2024, 12, 28, 23, 32, 3, tzinfo=datetime.timezone.utc), material='PLA', density=1.24, diameter=1.75, weight=1000.0, spool_weight=250.0, extruder_temp=220, bed_temp=60)
+# ---
+# name: test_get_filaments
+  list([
+    Filament(id=1, name='Bambu Green', color='00AE42', vendor=Vendor(id=1, name='Bambu Lab', external_id='Bambu Lab', registered=datetime.datetime(2024, 12, 28, 23, 32, 3, tzinfo=datetime.timezone.utc)), external_id='bambulab_pla_bambugreen_1000_175_n', registered=datetime.datetime(2024, 12, 28, 23, 32, 3, tzinfo=datetime.timezone.utc), material='PLA', density=1.24, diameter=1.75, weight=1000.0, spool_weight=250.0, extruder_temp=220, bed_temp=60),
+    Filament(id=2, name='PolyTerra™ Forest Green', color='519f61', vendor=Vendor(id=2, name='Polymaker', external_id='Polymaker', registered=datetime.datetime(2024, 12, 28, 23, 32, 22, tzinfo=datetime.timezone.utc)), external_id='polymaker_pla_polyterraforestgreen_1000_175_n', registered=datetime.datetime(2024, 12, 28, 23, 32, 22, tzinfo=datetime.timezone.utc), material='PLA', density=1.24, diameter=1.75, weight=1000.0, spool_weight=140.0, extruder_temp=210, bed_temp=50),
+  ])
+# ---
