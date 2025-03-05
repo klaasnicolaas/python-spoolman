@@ -14,4 +14,4 @@ class SpoolmanResponseError(SpoolmanError):
 
     def __init__(self, data: dict[str, str], code: int) -> None:
         """Initialize the exception."""
-        super().__init__(f'{data["message"]} (code: {code})')
+        super().__init__(f"{data['message']} (code: {code})")
