@@ -17,7 +17,6 @@
 [![Typing Status][typing-shield]][typing-url]
 [![Code Coverage][codecov-shield]][codecov-url]
 
-
 Asynchronous Python client for [Spoolman][spoolman].
 
 ## About
@@ -89,7 +88,7 @@ providing comprehensive management and control over project dependencies.
 
 You need at least:
 
-- Python 3.11+
+- Python 3.12+
 - [Poetry][poetry-install]
 
 ### Installation
