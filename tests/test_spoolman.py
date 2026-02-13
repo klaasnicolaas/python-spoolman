@@ -2,6 +2,7 @@
 
 # pylint: disable=protected-access
 import asyncio
+from unittest.mock import AsyncMock, patch
 
 import pytest
 from aiohttp import ClientResponse, ClientSession
@@ -56,25 +57,17 @@ async def test_different_scheme(aresponses: ResponsesMockServer) -> None:
         ),
     )
 
-    called_with_url = None
-
     async with ClientSession() as session:
         client = Spoolman(host="192.168.x.x", scheme="https", session=session)
 
         # Patch the session.request to capture the URL
-        original_request = session.request
+        with patch.object(session, "request", wraps=session.request) as mock_request:
+            await client._request("test")
 
-        async def capture_request(method, url, **kwargs):
-            nonlocal called_with_url
-            called_with_url = str(url)
-            return await original_request(method, url, **kwargs)
-
-        session.request = capture_request
-        await client._request("test")
-
-    # Verify the URL used https scheme
-    assert called_with_url is not None
-    assert called_with_url.startswith("https://")
+            # Verify the URL used https scheme
+            assert mock_request.called
+            called_url = str(mock_request.call_args[0][1])
+            assert called_url.startswith("https://")
 
 
 async def test_internal_session(aresponses: ResponsesMockServer) -> None:
