@@ -24,6 +24,7 @@ class Spoolman:
 
     host: str
     port: int = 7912
+    scheme: str = "http"
 
     request_timeout: float = 10.0
     session: ClientSession | None = None
@@ -58,7 +59,7 @@ class Spoolman:
 
         """
         url = URL.build(
-            scheme="http",
+            scheme=self.scheme,
             host=self.host,
             port=int(self.port),
             path="/api/v1/",
