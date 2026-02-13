@@ -44,6 +44,39 @@ async def test_different_port(aresponses: ResponsesMockServer) -> None:
         await client._request("test")
 
 
+async def test_different_scheme(aresponses: ResponsesMockServer) -> None:
+    """Test different scheme is handled correctly."""
+    aresponses.add(
+        "192.168.x.x:7912",
+        "/api/v1/test",
+        "GET",
+        aresponses.Response(
+            status=200,
+            headers={"Content-Type": "application/json"},
+        ),
+    )
+
+    called_with_url = None
+
+    async with ClientSession() as session:
+        client = Spoolman(host="192.168.x.x", scheme="https", session=session)
+
+        # Patch the session.request to capture the URL
+        original_request = session.request
+
+        async def capture_request(method, url, **kwargs):
+            nonlocal called_with_url
+            called_with_url = str(url)
+            return await original_request(method, url, **kwargs)
+
+        session.request = capture_request
+        await client._request("test")
+
+    # Verify the URL used https scheme
+    assert called_with_url is not None
+    assert called_with_url.startswith("https://")
+
+
 async def test_internal_session(aresponses: ResponsesMockServer) -> None:
     """Test internal session is handled correctly."""
     aresponses.add(
