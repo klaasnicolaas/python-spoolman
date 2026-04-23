@@ -60,10 +60,11 @@ More examples can be found in the [examples folder](./examples/).
 
 ## Class Parameters
 
-| Parameter | value Type | Description                                                       |
-| :-------- | :--------- | :---------------------------------------------------------------- |
-| `host`    | `str`      | The IP address of your Spoolman instance.                         |
-| `port`    | `int`      | The port of your Spoolman instance (optional). Default is `7912`. |
+| Parameter | value Type | Description                                                        |
+| :-------- | :--------- | :----------------------------------------------------------------- |
+| `scheme`  | `str`      | The scheme used to access your Soolman instance. Default is `http` |
+| `host`    | `str`      | The IP address of your Spoolman instance.                          |
+| `port`    | `int`      | The port of your Spoolman instance (optional). Default is `7912`.  |
 
 ## Contributing
 
