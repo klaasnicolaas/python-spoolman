@@ -1,10 +1,25 @@
 # serializer version: 1
 # name: test_get_vendor
-  Vendor(id=1, name='Bambu Lab', registered=datetime.datetime(2024, 12, 28, 23, 32, 3, tzinfo=datetime.timezone.utc), external_id='Bambu Lab')
+  Vendor(
+    external_id='Bambu Lab',
+    id=1,
+    name='Bambu Lab',
+    registered=datetime.datetime(2024, 12, 28, 23, 32, 3, tzinfo=datetime.timezone.utc),
+  )
 # ---
 # name: test_get_vendors
   list([
-    Vendor(id=1, name='Bambu Lab', registered=datetime.datetime(2024, 12, 28, 23, 32, 3, tzinfo=datetime.timezone.utc), external_id='Bambu Lab'),
-    Vendor(id=2, name='Polymaker', registered=datetime.datetime(2024, 12, 28, 23, 32, 22, tzinfo=datetime.timezone.utc), external_id='Polymaker'),
+    Vendor(
+      external_id='Bambu Lab',
+      id=1,
+      name='Bambu Lab',
+      registered=datetime.datetime(2024, 12, 28, 23, 32, 3, tzinfo=datetime.timezone.utc),
+    ),
+    Vendor(
+      external_id='Polymaker',
+      id=2,
+      name='Polymaker',
+      registered=datetime.datetime(2024, 12, 28, 23, 32, 22, tzinfo=datetime.timezone.utc),
+    ),
   ])
 # ---
