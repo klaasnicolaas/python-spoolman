@@ -1,6 +1,5 @@
 """Basic tests for Spoolman."""
 
-# pylint: disable=protected-access
 import asyncio
 
 import pytest

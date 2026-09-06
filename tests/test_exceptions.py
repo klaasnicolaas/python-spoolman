@@ -1,6 +1,5 @@
 """Test exceptions for Spoolman."""
 
-# pylint: disable=protected-access
 from __future__ import annotations
 
 from unittest.mock import patch

@@ -15,7 +15,7 @@ from yarl import URL
 from .exceptions import SpoolmanConnectionError, SpoolmanError, SpoolmanResponseError
 from .models import Filament, Info, Spool, Vendor
 
-VERSION = metadata.version(__package__)
+VERSION = metadata.version("spoolman")
 
 
 @dataclass
