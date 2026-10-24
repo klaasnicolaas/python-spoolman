@@ -9,7 +9,7 @@ from spoolman import Spoolman
 
 
 @pytest.fixture(name="spoolman_client")
-async def client() -> AsyncGenerator[Spoolman, None]:
+async def client() -> AsyncGenerator[Spoolman]:
     """Create a Spoolman client."""
     async with (
         ClientSession() as session,
